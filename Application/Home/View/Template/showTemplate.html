@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Show all templates</title>
+</head>
+<body>
+	<ul>
+	<foreach name="tpls" item="tpl">
+	<li>
+		ActivityName: {$tpl.activityname}&nbsp;
+		Title: {$tpl.title}&nbsp;
+	</li>
+	</foreach>
+	</ul>
+</body>
+</html>

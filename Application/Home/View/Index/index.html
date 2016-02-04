@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Version Number</title>
+</head>
+<body>
+<!--
+	version: {$version.version}
+	<br>
+	MS version: {$vText}
+-->
+	{$str}
+	<br>
+	{$str_helper}
+	<br>
+	Another: {$another_str}
+	<br>
+	global_str: {$global_str}
+	<br>
+	test_str: {$test_str}
+	<br>
+	<a href="{:U('Home/Index/showTemplate')}">Show spcific template</a>
+  <br>
+  <ul>
+    <volist name="list" id="item">
+      <li>{$item}</li>
+    </volist>
+  </ul>
+</body>
+</html>
+<!--
+<?php
+phpinfo();
+?>
+-->
+

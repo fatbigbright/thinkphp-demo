@@ -1,0 +1,6 @@
+.DS_Store
+*.swp
+ThinkPHP
+ThinkPHP/*
+Runtime
+Runtime/*

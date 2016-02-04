@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>hello {$name}</title>
+	<style>
+		.hello{
+			font-size: 24px;
+			font-weight: bold;
+			color: #446622;
+		}
+	</style>
+</head>
+<body>
+	<div class="hello">
+		hello, {$name}!
+		<br>
+		{:"~".U('index.php/Home/index/hospital', '', '')}
+		<a href="{:U('Home/index/hospital', '', '')}">test link</a>
+	</div>
+</body>
+</html>
