@@ -9,7 +9,7 @@ return array(
 	'DB_PWD'=>'1qazxsw2#',
 	'DB_PORT'=>'3306',
 	'DB_CHARSET'=>'utf8',
-	//'DB_PREFIX'=>'t_',
+	'DB_PREFIX'=>'t_',
 	//'DB_PREFIX'=>'td_',
 	'MSDB'=>array(
 		'DB_HOST'=>'192.168.0.102',

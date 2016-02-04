@@ -7,6 +7,7 @@ class IndexController extends Controller {
 		$this->global_str = 'global_str_SLDKFJSLDKJFOSDMFLSK';
 	}
     public function index(){
+        $line_items = array("0"=>"line 1", "1"=>"line 2", "2"=>"line 3");
         if(IS_POST){
             $transDB = new \Think\Model();
             $transDB->startTrans();
@@ -15,7 +16,7 @@ class IndexController extends Controller {
 
             if($header_result){
                 $id = $transDB->table('t_header')->getLastInsID();
-                $line = array('line'=>$_POST['line'], 'header_id'=>$id);
+                $line = array('line'=>$_POST['selectedText'], 'header_id'=>$id);
                 $line_result = $transDB->table('t_detail')->add($line);
                 if($line_result){
                     $transDB->commit();
@@ -27,6 +28,7 @@ class IndexController extends Controller {
                 $transDB->rollback();
             }
         }
+        $this->assign('line_items', $line_items);
         $this->display('transDemo');
     }
 	public function index_iwe(){

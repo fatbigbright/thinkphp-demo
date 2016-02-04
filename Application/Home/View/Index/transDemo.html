@@ -3,15 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <title></title>
+  <script>
+    window.onload = function(){
+      var submit = document.getElementById('save');
+      var test = document.getElementById('TEST');
+      var assignText = function(){
+        var selectedTextElement = document.getElementById('selectedText');
+        var select = document.getElementById('slt_line');
+        var selectedText = select.options[select.selectedIndex].text;
+        selectedTextElement.value = selectedText;
+      };
+      test.onclick = assignText;
+      submit.onclick = assignText;
+    };
+  </script>
 </head>
 <body>
   <h1>Test for transaction</h1>
   <form action="{:U('Home/Index/index')}" method="post">
     <label>Title: </label><input type="text" id="txt_title" name="title" />
     <br>
-    <label>Line: </label><input id="txt_line" type="text" name="line">
+    <!--<label>Line: </label><input id="txt_line" type="text" name="line">-->
+    <select id="slt_line" name="line">
+      <option value="-1">please select...</option>
+      <option value="0">line 1</option>
+      <option value="1">line 2</option>
+      <option value="2">line 3</option>
+    </select>
     <br>
-    <input type="submit" value="Save">
+    <input type="hidden" name="selectedText" id="selectedText" />
+    <input type="submit" value="Save" id="save">
+    <input type="button" value="TEST" id="TEST" />
   </form>
 </body>
 </html>
