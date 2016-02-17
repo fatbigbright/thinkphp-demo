@@ -7,6 +7,11 @@ class IndexController extends Controller {
 		$this->global_str = 'global_str_SLDKFJSLDKJFOSDMFLSK';
 	}
     public function index(){
+        $md5value = md5('123456'.'salt');
+        $this->assign('md5value', $md5value);
+        $this->display('md5Index');
+    }
+    public function index_trans(){
         $line_items = array("0"=>"line 1", "1"=>"line 2", "2"=>"line 3");
         if(IS_POST){
             $transDB = new \Think\Model();

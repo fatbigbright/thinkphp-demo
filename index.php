@@ -22,6 +22,8 @@ define('APP_PATH','./Application/');
 
 //define('BIND_MODULE', 'person');
 
+//$t = __DIR__.'/vender/autoload.php';
+
 // 引入ThinkPHP入口文件
 require './ThinkPHP/ThinkPHP.php';
 

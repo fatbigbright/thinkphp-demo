@@ -1,6 +1,12 @@
 .DS_Store
 *.swp
-ThinkPHP
-ThinkPHP/*
+!./ThinkPHP/
+./ThinkPHP/*
+!./ThinkPHP/Library/
+./ThinkPHP/Library/*
+!./ThinkPHP/Library/Vendor/
+./ThinkPHP/Library/Vendor/*
+!./ThinkPHP/Library/Vendor/php-jwt/
+bower_components
 Runtime
 Runtime/*
