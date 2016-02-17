@@ -3,7 +3,7 @@
 ThinkPHP/
 ThinkPHP/*
 bower_components
-./vendor
-./vendor/*
+vendor
+vendor/*
 Runtime
 Runtime/*

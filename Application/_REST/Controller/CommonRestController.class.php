@@ -1,11 +1,14 @@
 <?php
 namespace _REST\Controller;
 use Think\Controller\RestController;
+/*
 Vendor('php-jwt.BeforeValidException');
 Vendor('php-jwt.ExpiredException');
 Vendor('php-jwt.SignatureInvalidException');
 Vendor('php-jwt.JWT');
-use \Firebase\JWT\JWT;
+ */
+require APP_PATH.'../vendor/autoload.php';
+use \Firebase\JWT\JWT as jwt;
 class CommonRestController extends RestController{
     protected $allowMethod = array('get', 'put', 'post');
     protected $allowType = array('json');
@@ -51,7 +54,7 @@ class CommonRestController extends RestController{
          */
 
         try{
-            $decoded = JWT::decode($authorization, $this->encryKey, array('HS256'));
+            $decoded = jwt::decode($authorization, $this->encryKey, array('HS256'));
 
             $token = (array)$decoded;
         } catch(\UnexpectedValueException $ex){
